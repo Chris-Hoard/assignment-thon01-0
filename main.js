@@ -23,17 +23,6 @@ var work = {
 	
 	listAvaliable: function(){
 	    
-	    var findObjectByLabel = function(obj, label) {
-            if(obj.label === label) { return obj; }
-            for(var i in obj) {
-                if(obj.hasOwnProperty(i)){
-                    var foundLabel = findObjectByLabel(obj[i], label);
-                    if(foundLabel) { return foundLabel; }
-                }
-            }
-            return null;
-        };
-        
         for (var i in this.cars){
              if (this.cars[i].totalRented < this.cars[i].totalAvaliable){
 	            console.log(this.cars[i].type+" Avaliable: "+(this.cars[i].totalAvaliable-this.cars[i].totalRented).toString() + " Price: "+this.cars[i].price);
