@@ -20,7 +20,7 @@ var cars = {
 	listAvaliable: function(){
 	    this.car.forEach(function(car){
 	        if (car.totalRented < car.totalAvaliable){
-	            console.log(car.type+" Avaliable: "+(car.totalAvaliable-car.totalRented).toString());
+	            console.log(car.type+" Avaliable: "+(car.totalAvaliable-car.totalRented).toString() + " Price: "+car.price);
 	        }else{
 	            console.log(car.type+" Avaliable: 0");
 	        }
@@ -36,6 +36,8 @@ var cars = {
 	      this.listAvaliable();
 	      
 	  }
+	  
+	  
 };
 
 cars.listAvaliable();
